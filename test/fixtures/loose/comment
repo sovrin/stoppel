@@ -1,0 +1,5 @@
+{{- some comment }}Hello, {{$name}}!{{- here also }}
+---
+{ "name": "John" }
+---
+Hello, John!

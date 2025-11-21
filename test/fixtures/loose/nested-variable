@@ -1,0 +1,5 @@
+{{$foo.fizz.buzz}}
+---
+{ "foo": { "fizz": { "buzz": "fizz.buzz" } } }
+---
+fizz.buzz

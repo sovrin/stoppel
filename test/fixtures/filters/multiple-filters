@@ -1,0 +1,5 @@
+{{$name | upper | explode}}
+---
+{ "name": "John" }
+---
+J O H N

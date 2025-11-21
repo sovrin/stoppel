@@ -1,0 +1,49 @@
+{{#header}}
+import type { ArgTypes } from "@storybook/react";
+import type { {{$type}} } from "./{{$name}}";
+{{/header}}
+
+{{#body}}
+export const {{$name}}ArgTypes: ArgTypes<{{$type}}> = {
+{{[>property]}}
+};
+{{/body}}
+
+{{#control}}control: {{$value}}{{/control}}
+
+{{#property}}
+    {{$label}}: {
+        {{>control}};
+    },
+{{/property}}
+
+{{#}}
+{{>header}}
+
+{{>body}}
+{{/}}
+---
+{
+    "type": "ButtonProps",
+    "name": "button",
+    "property": [
+        { "label": "Apples", "value": "boolean" },
+        { "label": "Oranges", "value": "number" },
+        { "label": "Foo", "value": "string" }
+    ]
+}
+---
+import type { ArgTypes } from "@storybook/react";
+import type { ButtonProps } from "./button";
+
+export const buttonArgTypes: ArgTypes<ButtonProps> = {
+    Apples: {
+        control: boolean;
+    },
+    Oranges: {
+        control: number;
+    },
+    Foo: {
+        control: string;
+    },
+};

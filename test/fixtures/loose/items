@@ -1,0 +1,17 @@
+{{#items}}
+- {{$name}}
+{{/items}}
+
+{{#}}
+{{[>items]}}
+{{/}}
+---
+{ "items": [
+    { "name": "Apple" },
+    { "name": "Banana" },
+    { "name": "Pear" }
+]}
+---
+- Apple
+- Banana
+- Pear

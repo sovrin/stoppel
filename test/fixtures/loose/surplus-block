@@ -1,0 +1,10 @@
+{{#greeting}}
+Hello, {{$name}}!
+{{/greeting}}
+
+{{#}}
+{{>unknown}}
+{{/}}
+---
+{ "name": "World" }
+---

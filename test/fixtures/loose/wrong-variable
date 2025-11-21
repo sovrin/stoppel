@@ -1,0 +1,33 @@
+{{#body}}
+{{[>property]}}
+{{/body}}
+
+{{#control}}control: {{$value}}{{/control}}
+
+{{#property}}
+    {{$label}}: {
+        {{>control}};
+    },
+{{/property}}
+
+{{#}}
+{
+{{>body}}
+}
+{{/}}
+---
+{
+    "property": [
+        { "label": "Apples", "value": 2 },
+        { "label": "Oranges", "value": false }
+    ]
+}
+---
+{
+    Apples: {
+        control: 2;
+    },
+    Oranges: {
+        control: false;
+    },
+}

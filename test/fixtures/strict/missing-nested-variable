@@ -1,0 +1,5 @@
+{{$foo.buzz}}
+---
+{ "foo": { "fizz": { "buzz": "fizz.buzz" } } }
+---
+Missing value for key: foo.buzz

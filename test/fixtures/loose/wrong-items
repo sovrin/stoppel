@@ -1,0 +1,10 @@
+{{#existingBlock}}
+Content
+{{/existingBlock}}
+
+{{#}}
+{{[>missingBlock]}}
+{{/}}
+---
+{ "missingBlock": [1, 2, 3] }
+---
