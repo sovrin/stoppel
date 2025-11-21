@@ -5,5 +5,5 @@ export type {
     TemplateContext,
     BlockMap,
     Blocks,
-    BlockName
+    BlockName,
 } from './types';

@@ -5,7 +5,7 @@ export type TagRenderer = (
     context: TemplateContext,
     blocks: Blocks,
     config: Config,
-) => string
+) => string;
 
 export interface TagHandler {
     canHandle(tag: string): boolean;

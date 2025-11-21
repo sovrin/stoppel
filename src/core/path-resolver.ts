@@ -1,9 +1,7 @@
 import { TemplateContext } from '../types';
 
 export const getPath = (context: any, path: string): any => {
-    return path
-        .split('.')
-        .reduce((acc, key) => (acc?.[key]), context);
+    return path.split('.').reduce((acc, key) => acc?.[key], context);
 };
 
 export const getValue = (
