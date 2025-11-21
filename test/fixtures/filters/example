@@ -1,0 +1,37 @@
+{{- this is a comment}}
+
+{{#banner}}
+Hello, {{$value | upper}}!
+  {{>bear}}
+{{/banner}}
+
+{{#bear}}
+ฅʕ•ᴥ•ʔ
+{{/bear}}
+
+{{#fruits}}
+  - {{$name}}
+{{/fruits}}
+
+
+{{#}}
+{{>banner}}
+
+{{[>fruits]}}
+{{/}}
+---
+{
+    "value": "World",
+    "fruits": [
+        { "name": "Apple" },
+        { "name": "Banana" },
+        { "name": "Pear" }
+    ]
+}
+---
+Hello, WORLD!
+  ฅʕ•ᴥ•ʔ
+
+  - Apple
+  - Banana
+  - Pear
