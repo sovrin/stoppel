@@ -1,7 +1,12 @@
-import { TAG_REGEX, BLOCK_REGEX } from '../constants';
+import { TAG_REGEX } from '../constants';
 import { Config, TemplateContext, Blocks } from '../types';
 import { DEFAULT_CONFIG } from '../types';
-import { VariableHandler, MapHandler, BlockHandler, CommentHandler } from './tag-handlers';
+import {
+    VariableHandler,
+    MapHandler,
+    BlockHandler,
+    CommentHandler,
+} from './tag-handlers';
 import { Compiler } from './compiler';
 
 export class TemplateRenderer {
@@ -13,18 +18,13 @@ export class TemplateRenderer {
         new CommentHandler(),
     ];
 
-    render(
-        template: string,
-        context: TemplateContext,
-        config: Config,
-    ): string {
+    render(template: string, context: TemplateContext, config: Config): string {
         const mergedConfig = { ...DEFAULT_CONFIG, ...config };
         const blocks = this.compiler.compile(template);
         const mainBlock = blocks['(main)'] || template;
 
         return this.processTemplate(mainBlock, context, blocks, mergedConfig);
     }
-
 
     private processTemplate(
         template: string,

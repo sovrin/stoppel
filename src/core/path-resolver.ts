@@ -9,7 +9,7 @@ export const getPath = (context: any, path: string): any => {
 export const getValue = (
     key: string,
     context: TemplateContext,
-    strict: boolean,
+    strict?: boolean,
 ): string => {
     const value = getPath(context, key);
     if (value === undefined) {
